@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Login</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <div class="blurr">
+        <h2>Enter details to login</h2>
+        <p>Employee ID:</p>
+        <input type="text" id="ename">
+        <p id="pd">Password: </p>
+        <input type="password" id="pwd">
+        <button onclick="auth()">Login</button>
+    </div>
+    <h4 style="right: 5px;bottom: 0;position: absolute;">Made By: Kshitij Sharma</h4>
+</body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<script>
+    var details=null;
+    const pwd = $("#pwd");
+    const emp = $("#ename");
+    $.getJSON('data.json', function(data) { details = data["ID&Passwords"]});
+
+    pwd.keypress((e)=>{
+        if(e.which==13)
+            auth()
+    })
+
+    let auth = function(){
+        if(emp.val().length === 0 || pwd.val().length===0)
+            alert('Please enter details');
+        else{
+            if(details[emp.val()]==undefined)
+                alert("Invalid employee ID")
+            else if(details[emp.val()]==pwd.val()){
+                window.location.replace('./index.html')
+            }
+            else
+                alert("Invalid password")
+        }
+    }
+
+</script>
+</html>

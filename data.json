@@ -1,0 +1,64 @@
+{
+    "productsByCodes":{
+        "noodles#1":{
+            "details":{
+                "name":"Maggi masala noodles",
+                "net weight":70,
+                "category":"edibles",
+                "company":"Nestle",
+                "dateOfManufacture":"24-08-2021",
+                "best before":9
+            },
+            "price":12
+        },
+        "toothPaste#1":{
+            "details":{
+                "name":"Colgate Charcoal clean",
+                "net weight":120,
+                "category":"toiletry",
+                "company":"Colgate-Palmolive",
+                "dateOfManufacture":"20-08-2021",
+                "best before":18
+            },
+            "price":99
+        },
+        "toothPaste#2":{
+            "details":{
+                "name":"Colgate Herbal",
+                "net weight":120,
+                "category":"toiletry",
+                "company":"Colgate-Palmolive",
+                "dateOfManufacture":"24-08-2021",
+                "best before":18
+            },
+            "price":59
+        },
+        "shampoo#1":{
+            "details":{
+                "name":"head & shoulders cool menthol",
+                "net weight":220,
+                "category":"toiletry",
+                "company":"Procter and Gamble",
+                "dateOfManufacture":"15-10-2020",
+                "best before":36
+            },
+            "price":145
+        },
+        "Chips#1":{
+            "details":{
+                "name":"Lays cream and onion",
+                "net weight":25,
+                "category":"edibles",
+                "company":"Pepsico",
+                "dateOfManufacture":"15-08-2021",
+                "best before":9
+            },
+            "price":10
+        }
+    },
+    "ID&Passwords":{
+        "ac96723":"very gooooood",
+        "ac96724":"hello123",
+        "ac96969":"123xyz"
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data entry</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="blurr">
+        <h1>Products</h1>
+        <div id="menu">
+            <p>Product code:</p>
+            <div>
+                <datalist id="suggestions">
+                </datalist>
+                <input id="codeInput" autoComplete="on" list="suggestions"/> 
+            </div>
+            <p>Quantity:</p>
+            <input id="quant" type="number" min="1" max="50" disabled value=1>
+            <button class="btnStyle smol" id="addBtn" disabled>Add to cart</button>
+        </div>
+        <div id="allDetails">
+            <table>
+                <thead>
+                  <tr>
+                    <th>
+                      Name
+                    </th>
+                    <th>
+                      Net weight (grams)
+                    </th>
+                    <th>
+                        Category
+                    </th>
+                    <th>
+                        Company
+                    </th>
+                    <th>
+                        Manf. date
+                    </th>
+                    <th>
+                        Best before (months)
+                    </th>
+                    <th>
+                        Price/unit (₹)
+                    </th>
+                    <th>
+                        Quantity
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+              </table>
+        </div>
+        <button class="btnStyle" id="billbtn">Go to billing</button>
+    </div>
+    <h4 style="right: 5px;bottom: 0;position: absolute;">Made By: Kshitij Sharma</h4>
+</body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="./index.js"></script>
+</html>

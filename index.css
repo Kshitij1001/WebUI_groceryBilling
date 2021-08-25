@@ -1,0 +1,174 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url("./store.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blurr {
+  width: 80%;
+  height: auto;
+  min-height: 35%;
+  background-color: rgba(0, 0, 0, 0.534);
+  backdrop-filter: blur(5px);
+  display: block;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  top: 20%;
+  left: 10%;
+  position: absolute;
+  border: 3px solid #1750ec;
+}
+
+.blurr h1,
+.blurr p {
+  color: white;
+  text-align: center;
+}
+
+#menu > * {
+  display: inline-block;
+}
+
+#menu > p {
+  margin-left: 7%;
+}
+
+#menu {
+  padding-left: 10%;
+}
+
+#allDetails {
+  margin-top: 3%;
+  border: 2px solid rgb(65, 179, 255);
+  border-radius: 10px;
+}
+
+table {
+  display: block;
+  width: 100%;
+}
+
+tr,
+td,
+tbody {
+  display: block;
+}
+
+thead {
+  display: none;
+}
+
+tr {
+  padding-bottom: 10px;
+}
+
+td {
+  padding: 10px 10px 0;
+  color: white;
+  text-align: center;
+}
+
+th {
+  text-align: center;
+  font-weight: 800;
+}
+
+thead th {
+  background-color: #202932;
+  color: #fff;
+  border: 1px solid #202932;
+}
+
+.btnStyle {
+  border-radius: 10px;
+  background-color: #123eb8;
+  color: white;
+  border: 3px solid rgb(65, 179, 255);
+  box-shadow: 8px;
+}
+
+.smol {
+  width: 12%;
+  height: 29px;
+  margin-left: 10%;
+}
+
+#billbtn {
+  display: block;
+  width: 18%;
+  height: 30px;
+  margin-left: 40%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0d2569;
+}
+button:active {
+  transform: translateY(4px);
+}
+
+@media (min-width: 720px) {
+  table {
+    display: table;
+  }
+
+  tr {
+    display: table-row;
+  }
+
+  td,
+  th {
+    display: table-cell;
+  }
+
+  tbody {
+    display: table-row-group;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  td {
+    border: 1px solid #28333f;
+  }
+
+  td,
+  th {
+    padding: 10px;
+  }
+
+  tr:nth-child(2n + 2) td {
+    background-color: #242e39;
+  }
+  tr:nth-child(2n + 1) td {
+    background-color: #3e5166;
+  }
+}
+
+.blurr > h2 {
+  text-align: center;
+  color: black;
+  border: 3px solid #1750ec;
+  border-radius: 5px;
+  width: fit-content;
+  margin-left: 43%;
+  margin-right: 10px;
+  background-color: aqua;
+}
+
+.blurr > p {
+  float: right;
+  margin: 0;
+}

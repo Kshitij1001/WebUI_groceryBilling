@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="blurr">
+        <h1>Billing Details</h1>
+        <div id="allDetails">
+            <table>
+                <thead>
+                  <tr>
+                    <th>
+                      Name
+                    </th>
+                    <th>
+                        Price/unit (₹)
+                    </th>
+                    <th>
+                        GST (5%)
+                    </th>
+                    <th>
+                        Quantity
+                    </th>
+                    <th>
+                        Net Price (₹)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+        </div>
+        <h2>Total: </h2>
+        <p id="dnt"></p></br>
+        <p>Bill no: </p>
+    </div>
+    <h4 style="right: 5px;bottom: 0;position: absolute;">Made By: Kshitij Sharma</h4>
+</body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    let list2 = JSON.parse(sessionStorage.getItem("proList"));
+    let det = null, cartKeys=null;
+    let total=0;
+    $.getJSON('data.json', (data)=>{
+        det = data["productsByCodes"];
+        cartKeys = Object.keys(list2);
+        let row='',p=0,gst=0,net=0;
+        for(let i=0;i<cartKeys.length;i++){
+            p=Number(det[cartKeys[i]].price);
+            gst=Number((p*0.05).toFixed(2));
+            net=Number(((p+gst)*Number(list2[cartKeys[i]])).toFixed(2));
+            total+=net;
+            row = row + `<tr><td>${det[cartKeys[i]].details.name}</td>
+                <td>${p.toString()}</td>
+                <td>${gst.toString()}</td>
+                <td>${list2[cartKeys[i]]}</td>
+                <td>${net.toString()}</td>
+                </tr>`;
+        }
+        $("tbody").append(row);
+        $(".blurr>h2").text("Total: "+total.toFixed(2));
+        $(".blurr>p:last-child").text("Bill no. "+Date().slice(8,24).replaceAll(" ","").replaceAll(":","")+Math.floor(total).toString());
+        $("#dnt").text("Date & time: "+Date().toString());
+    });
+</script>
+</html>
