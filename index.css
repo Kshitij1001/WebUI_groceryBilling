@@ -172,3 +172,12 @@ button:active {
   float: right;
   margin: 0;
 }
+
+h4 {
+  right: 5px;
+  bottom: 0;
+  position: absolute;
+  color: black;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.295);
+}
